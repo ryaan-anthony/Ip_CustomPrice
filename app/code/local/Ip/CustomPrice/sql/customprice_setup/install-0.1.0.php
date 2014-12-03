@@ -16,7 +16,7 @@ try{
         'store_id'           => Mage_Core_Model_App::ADMIN_STORE_ID,
         'website_ids'        => [1],
         'attribute_set_id'   => 9,
-        'type_id'            => Mage_Catalog_Model_Product_Type::TYPE_SIMPLE,
+        'type_id'            => Mage_Catalog_Model_Product_Type::TYPE_VIRTUAL,
         'sku'                => Ip_CustomPrice_Model_Observer::SKU,
         'name'               => 'Custom Price',
         'weight'             => 0,
