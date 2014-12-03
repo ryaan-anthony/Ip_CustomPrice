@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ip_CustomPrice>
+            <version>0.1.0</version>
+        </Ip_CustomPrice>
+    </modules>
+    <global>
+        <events>
+            <catalog_product_get_final_price>
+                <observers>
+                    <custom_price_observer>
+                        <type>singleton</type>
+                        <class>Ip_CustomPrice_Model_Observer</class>
+                        <method>apply_payment</method>
+                    </custom_price_observer>
+                </observers>
+            </catalog_product_get_final_price>
+        </events>
+        <resources>
+            <customprice_setup>
+                <setup>
+                    <module>Ip_CustomPrice</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </customprice_setup>
+        </resources>
+    </global>
+
+</config>
